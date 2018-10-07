@@ -4,7 +4,7 @@
 name = "yinwang"
 license = "MIT"
 licenselink = "https://github.com/chinanf-boy/gohugo-theme-yinwang/blob/master/LICENSE.md"
-description = "A minimal blog theme for yinwang.org"
+description = "A minimal blog theme from yinwang.org"
 homepage = "https://github.com/chinanf-boy/gohugo-theme-yinwang"
 tags = ["minimal", "blog", "personal", "simple", "yinwang", "clean"]
 features = []
