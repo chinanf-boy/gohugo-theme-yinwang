@@ -13,12 +13,27 @@
 
 ### 主题下载
 
+0. 记得初始化
+
 ``` bash
+git init
+```
+
+1. 加入子模块
+```
 git submodule add https://github.com/chinanf-boy/gohugo-theme-yinwang.git themes/yinwang;
 ```
 
+2. 主题设置
+
 ```
 echo 'theme = "yinwang"' >> config.toml
+```
+
+3. 服务器启动
+
+```
+hugo server -D
 ```
 
 ### config.toml配置
@@ -27,7 +42,7 @@ echo 'theme = "yinwang"' >> config.toml
 baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "我是"
-theme = "basics"
+theme = "yinwang"
 
 [params]
     author = "yobrave Lee"
