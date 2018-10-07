@@ -30,6 +30,14 @@ git submodule add https://github.com/chinanf-boy/gohugo-theme-yinwang.git themes
 echo 'theme = "yinwang"' >> config.toml
 ```
 
+2.1 加个文章
+
+```
+hugo new post/hello.md
+```
+
+> 最好再加个`post/about.md`
+
 3. 服务器启动
 
 ```
