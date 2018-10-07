@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+
+    <!-- load bootstrap css -->
+    <title>{{.Title}}</title>
+    <link rel="stylesheet" href="/css/stylesheet.css">
+
+    {{ if .IsHome }}
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
+
+    <link rel="stylesheet" href="/css/home.css">
+
+    {{ else }}
+    {{ with .Site.Params.highlight | default "github" }}
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css" rel="stylesheet">
+    {{end}}
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    {{range .Site.Params.langs }} <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>{{ end }}
+    
+    
+    <script>hljs.initHighlightingOnLoad();</script>
+    <link rel="stylesheet" href="/css/main.css">
+    {{ end }}
+
+</head>
+
+<body>
+    <script>
+        window.addEventListener("resize", resizeThrottler, false);
+
+                    var resizeTimeout;
+                    function resizeThrottler() {
+                    // ignore resize events as long as an actualResizeHandler execution is in the queue
+                    if ( !resizeTimeout ) {
+                        resizeTimeout = setTimeout(function() {
+                        resizeTimeout = null;
+                        actualResizeHandler();
+                    
+                        // The actualResizeHandler will execute at a rate of 15fps
+                        }, 66);
+                    }
+                    }
+                    function actualResizeHandler() {
+                            if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+                            {
+                                document.body.classList.add('mobile');
+                            }else{
+                                document.body.classList.remove('mobile');  
+                            }
+                    }</script>
+    {{ if .IsHome }}
+    <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .9" role="navigation">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+
+                </button>
+                <a class="navbar-brand" href="/">{{ .Site.Title | default "Basics"}}</a>
+            </div>
+
+            <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: auto;">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="active"><a class="nav-item nav-link {{ if eq .URL "/"}}{{ end }}" href="/">Home</a></li>
+                    <li>{{ with .Site.Params.github }}<a class="nav-item nav-link" href="https://github.com/{{ . }}"
+                            target="_blank">GitHub</a>{{ end }}</li>
+                    <li>{{ with .Site.Params.gitlab }}<a class="nav-item nav-link" href="https://gitlab.com/{{ . }}"
+                            target="_blank">GitLab</a>{{ end }}</li>
+                    <li><a class="nav-item nav-link {{ if eq .URL "/about/"}}{{ end }}" href="/about/">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    {{ end }}
+
+
+    {{ if .IsHome }}
+    <!-- <section id="page-title">
+          <h1><a href="/">{{ .Site.Title | default "Basics"}}</a></h1>
+          <span id="author-name">
+            <h6><a href="/about/">{{ .Site.Params.Author }}</a></h6>
+          </span>
+        </section> -->
+    {{ end }}

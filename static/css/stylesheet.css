@@ -1,0 +1,53 @@
+body {
+    font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif;
+    margin: auto;
+}
+
+#page-title {
+    text-align: center;
+}
+
+#page-title h1 a {
+    /* color: black; */
+    font-size: 2.7rem;
+}
+
+.post a {
+    /* color: black; */
+}
+
+#author-name h6 a {
+  color: rgb(104, 19, 19);
+  font-weight: normal;
+  font-size: small;
+}
+
+#page-title a:hover, .post a:hover {
+    text-decoration: underline;
+}
+
+.date-time-title {
+    font-family: 'Ubuntu Mono', monospace;
+}
+
+.blog-post-content {
+  padding-top: 1em;
+  padding-bottom: 1em;
+}
+
+.posts_listing li {
+  list-style-type: none;
+}
+
+section {
+    width: 100%;
+}
+
+h1 {
+  font-size: 2rem;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+}

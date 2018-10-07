@@ -1,0 +1,21 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "yinwang"
+license = "MIT"
+licenselink = "https://github.com/chinanf-boy/gohugo-theme-yinwang/blob/master/LICENSE.md"
+description = "A minimal blog theme for yinwang.org"
+homepage = "https://github.com/chinanf-boy/gohugo-theme-yinwang"
+tags = ["minimal", "blog", "personal", "simple", "yinwang", "clean"]
+features = []
+min_version = "0.38"
+
+[author]
+  name = "Yobrave Lee"
+  homepage = "https://github.com/chinanf-boy/gohugo-theme-yinwang"
+
+# If porting an existing theme
+[original]
+  name = "Arjun Krishna Babu"
+  homepage = "https://arjunkrishnababu96.github.io/"
+  repo = "https://github.com/arjunkrishnababu96/basics"

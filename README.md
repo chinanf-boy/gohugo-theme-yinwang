@@ -1,0 +1,43 @@
+## hugo的 yinwang.org 博客主题
+
+<img style="width:69%" src="./images/tn.png">
+
+<img style="width:80%" src="./images/screenshot.png">
+
+
+### hugo准备
+
+若你第一次使用hugo, 请参照一下[官方快速教程](https://gohugo.io/getting-started/quick-start/)
+
+> [直到 *添加主题* 那一步往下看](https://gohugo.io/getting-started/quick-start/#step-3-add-a-theme)
+
+### 主题下载
+
+``` bash
+git submodule add https://github.com/chinanf-boy/gohugo-theme-yinwang.git themes/yinwang;
+```
+
+```
+echo 'theme = "yinwang"' >> config.toml
+```
+
+### config.toml配置
+
+``` toml
+baseURL = "http://example.org/"
+languageCode = "en-us"
+title = "我是"
+theme = "basics"
+
+[params]
+    author = "yobrave Lee"
+    github = "chinanf-boy"
+    # gitlab = "yobrave"
+    highlight = "dracula" # default use `github` style
+    langs = ["go"] 
+    # default load highlight.min.js but some language, Must add by youself
+```
+
+### 本主题
+
+是由[basics](https://github.com/arjunkrishnababu96/basics)hugo主题, 拿来改的
