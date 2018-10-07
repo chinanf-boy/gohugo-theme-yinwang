@@ -1,8 +1,8 @@
 ## hugo的 yinwang.org 博客主题
 
-<img style="width:69%" src="./images/tn.png">
+<img style="width:69%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/tn.png">
 
-<img style="width:80%" src="./images/screenshot.png">
+<img style="width:80%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/screenshot.png">
 
 
 ### hugo准备
