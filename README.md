@@ -36,7 +36,7 @@ echo 'theme = "yinwang"' >> config.toml
 hugo new post/hello.md
 ```
 
-> 最好再加个`post/about.md`
+> 最好再加个`about.md`
 
 3. 服务器启动
 
