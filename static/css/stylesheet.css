@@ -1,6 +1,5 @@
 body {
     font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei, "Microsoft YaHei", "Songti SC", SimSun, Heiti, sans-serif;
-    margin: auto;
 }
 
 #page-title {
@@ -10,10 +9,6 @@ body {
 #page-title h1 a {
     /* color: black; */
     font-size: 2.7rem;
-}
-
-.post a {
-    /* color: black; */
 }
 
 #author-name h6 a {
