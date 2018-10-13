@@ -69,9 +69,9 @@ body.mobile .navbar-nav {
 }
 
 div.outer {
-    margin: 7% 10% 2% 10%;
+    margin: 7rem 10% 2% 10%;
 }
 
 body.mobile div.outer {
-    margin: 20% 2% 2% 2%;
+    margin: 8rem 2% 2% 2%;
 }

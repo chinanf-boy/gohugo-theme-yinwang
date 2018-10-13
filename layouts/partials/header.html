@@ -2,9 +2,11 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
-
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    {{ if .IsHome }}
+    {{ else }}
+    <meta name="viewport" content="width=device-width, initial-scale=0.5">
+    {{ end }}
     <!-- load bootstrap css -->
     <title>{{.Title}}</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
@@ -33,26 +35,27 @@
     <script>
         window.addEventListener("resize", resizeThrottler, false);
 
-                    var resizeTimeout;
-                    function resizeThrottler() {
-                    // ignore resize events as long as an actualResizeHandler execution is in the queue
-                    if ( !resizeTimeout ) {
-                        resizeTimeout = setTimeout(function() {
-                        resizeTimeout = null;
-                        actualResizeHandler();
-                    
-                        // The actualResizeHandler will execute at a rate of 15fps
-                        }, 66);
-                    }
-                    }
-                    function actualResizeHandler() {
-                            if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
-                            {
-                                document.body.classList.add('mobile');
-                            }else{
-                                document.body.classList.remove('mobile');  
-                            }
-                    }</script>
+        var resizeTimeout;
+        function resizeThrottler() {
+        // ignore resize events as long as an actualResizeHandler execution is in the queue
+        if ( !resizeTimeout ) {
+            resizeTimeout = setTimeout(function() {
+            resizeTimeout = null;
+            actualResizeHandler();
+        
+            // The actualResizeHandler will execute at a rate of 15fps
+            }, 66);
+        }
+        }
+        actualResizeHandler()
+        function actualResizeHandler() {
+                if (/mobile/i.test(navigator.userAgent) || /android/i.test(navigator.userAgent))
+                {
+                    document.body.classList.add('mobile');
+                }else{
+                    document.body.classList.remove('mobile');  
+                }
+        }</script>
     {{ if .IsHome }}
     <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .9" role="navigation">
         <div class="container-fluid">
