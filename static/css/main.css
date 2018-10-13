@@ -188,3 +188,29 @@ body.mobile div.ad-banner {
 .side-ad.mobile {
     display: none;
 }
+
+body.mobile .side-btn{
+    display: none;
+}
+
+.side-btn{
+    position: fixed;
+    background-color: #fbf6ec;
+    -ms-transform: translate(calc(-8vw - 100%),0); 
+    -webkit-transform: translate(calc(-8vw - 100%),0); 
+    transform: translate(calc(-8vw - 100%),0); 
+    top: 50vh;
+}
+.side-btn a {
+    display: block;
+}
+.back {
+    -ms-transform:rotate(7deg);
+    -webkit-transform: rotate(7deg);
+    transform: rotate(7deg);
+}
+.side-btn a:hover {     
+    -ms-transform:rotate(-7deg);
+    -webkit-transform: rotate(-7deg);
+    transform: rotate(-7deg);
+}

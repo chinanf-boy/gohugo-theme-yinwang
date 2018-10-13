@@ -74,12 +74,17 @@
 
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: auto;">
                 <ul class="nav navbar-nav navbar-right">
-                    <li class="active"><a class="nav-item nav-link {{ if eq .URL "/"}}{{ end }}" href="/">Home</a></li>
+                    <!-- {{with .Site.Menus.main }}
+                    {{ range . }}
+                     <li class="{{ if eq .URL "/"}}active{{ end }}"><a href="{{.URL}}">{{.Name}}</a></li>
+                    {{ end }}
+                    {{ end }} -->
+                    <li class="{{ if eq .URL "/"}}active{{ end }}"><a class="nav-item nav-link" href="/">Home</a></li>
                     <li>{{ with .Site.Params.github }}<a class="nav-item nav-link" href="https://github.com/{{ . }}"
                             target="_blank">GitHub</a>{{ end }}</li>
                     <li>{{ with .Site.Params.gitlab }}<a class="nav-item nav-link" href="https://gitlab.com/{{ . }}"
                             target="_blank">GitLab</a>{{ end }}</li>
-                    <li><a class="nav-item nav-link {{ if eq .URL "/about/"}}{{ end }}" href="/about/">About</a></li>
+                    <li class="{{ if eq .URL "/about/"}}active{{ end }}"><a class="nav-item nav-link" href="/about/">About</a></li>
                 </ul>
             </div>
         </div>
