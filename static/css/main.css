@@ -203,6 +203,7 @@ body.mobile .side-btn{
 }
 .side-btn a {
     display: block;
+    color: #a57474;
 }
 .back {
     -ms-transform:rotate(7deg);
@@ -213,4 +214,5 @@ body.mobile .side-btn{
     -ms-transform:rotate(-7deg);
     -webkit-transform: rotate(-7deg);
     transform: rotate(-7deg);
+    color: #930ee4;
 }
