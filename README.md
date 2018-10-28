@@ -85,9 +85,12 @@ url = "/tags"
 [[menu.main]]
   name = "Home"
   url = "/"
+  # weight = 10 
+# 这个权重，是衡量顺序的
 ``` 
 
-> 提示：main的html顺序是相反的
+
+> 提示：main的html顺序是相反的, 若想自定义顺序，添加 **权重值**
 
 
 - **2. :** 我 想单页面的Home 按钮去除
