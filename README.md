@@ -58,10 +58,44 @@ theme = "yinwang"
     # gitlab = "yobrave"
     highlight = "dracula" # default use `github` style
     langs = ["go"]
-    # default load highlight.min.js but some language, Must add by youself
+    # 默认加载 highlight.min.js ，但 一些不支持的语言, 你自己添加
+
     # single = false
     # 单页面的Home 按钮去除
+    # menus = true
+    # 我 想加更多目录
 ```
+
+## 常见问题
+
+- **1. :** 我 想正常添加，更多目录
+
+``` toml
+[params]
+    menus = true
+
+[[menu.main]]
+name = "分类"
+url = "/categories/"
+
+[[menu.main]]
+name = "标签"
+url = "/tags"
+
+[[menu.main]]
+  name = "Home"
+  url = "/"
+``` 
+
+> 提示：main的html顺序是相反的
+
+
+- **2. :** 我 想单页面的Home 按钮去除
+
+``` toml
+[params]
+    single = false
+``` 
 
 ### 本主题
 
