@@ -94,6 +94,9 @@ pre {
 
 code {
     font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO", Proggy, monospace;
+    background-color: #eff0f1;
+    white-space: pre-wrap;
+    padding: 1px 5px;
 }
 
 
