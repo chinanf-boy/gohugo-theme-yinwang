@@ -5,8 +5,25 @@
 /* reset CSS */
 table {	
     font-size: 100%;
+    border-collapse: collapse;
 }
 /* end reset CSS */
+
+table tr:nth-child(2n) {
+    background-color: #f6f8fa;
+}
+
+table tr {
+    background-color: #fff;
+    border-top: 1px solid #c6cbd1;
+}
+
+table th, table td {
+    margin: 0;
+    padding: 6px 13px;
+    border: 1px solid #dfe2e5;
+}
+
 
 body {
     font-family:"lucida grande", "lucida sans unicode", lucida, helvetica, "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
