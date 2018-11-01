@@ -68,6 +68,10 @@ theme = "yinwang"
 
 ## 常见问题
 
+- **0. :** 想加统计脚本?
+
+关于谷歌或百度的统计工具，因为我很少用，若有需要可添加到[header.html](./layouts/partials/header.html)，再加个配置**config.toml**可控私人ID，就好，等你PR噢
+
 - **1. :** 我 想正常添加，更多目录
 
 ``` toml
