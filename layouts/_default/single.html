@@ -1,4 +1,6 @@
-{{ define "content" }}
+{{ partial "header" . }}
+
+
 <div class="inner" style="position:relative;">
   {{ if eq .Site.Params.single false }}
   
@@ -13,4 +15,5 @@
 <br />
 <br />
   </div>
-{{ end }}
+
+{{ partial "footer" . }}

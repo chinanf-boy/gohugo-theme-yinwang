@@ -1,0 +1,11 @@
+<div class="site-header-content">
+  <div style="font-size:2.3rem; " ><a href="/" class="back" style="color:#2f6f6f;">Home </a></div>
+  <h1 class="site-title">{{.Title | title}}</h1>
+    
+    <h2 class="site-description">&#x2F;&nbsp;
+      {{ $data := .Data }}
+      {{ range $key, $value := .Data.Terms.Alphabetical }}
+      <a href="{{ $.Site.BaseURL }}{{ $data.Plural }}/{{ $value.Name | urlize }}"> {{ $value.Name }} </a> ({{ $value.Count }})&nbsp;&#x2F;&nbsp;
+      {{ end }}
+    </h2>
+</div>
