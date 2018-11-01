@@ -25,6 +25,28 @@ table td {
   border: 1px solid #dfe2e5;
 }
 
+details {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    padding: .5em .5em 0;
+}
+
+summary {
+    margin: -.5em -.5em 0;
+    padding: .5em;
+}
+
+details[open] {
+    padding: .5em;
+}
+
+details[open] summary {
+    font-style: italic;
+    border-bottom: 1px solid #aaa;
+    margin-bottom: .5em;
+}
+
+
 body {
   font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica,
     'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
