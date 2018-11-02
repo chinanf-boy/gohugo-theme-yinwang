@@ -1,25 +1,30 @@
-      <footer>
-        <hr>
-        <small style="font-size:16px;">
-            &copy; {{ now.Format "2006" }} <a href="https://github.com/{{.Site.Params.github}}">{{ .Site.Params.author }}.</a> 
-          <!-- Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> using the <a href="https://github.com/arjunkrishnababu96/basics" target="_blank">Basics</a> theme. -->
-        </small>
-      </footer>
-    </div> <!-- closes the outer/inner div -->
+<footer>
+  <hr>
+  <small style="font-size:16px;">
+    &copy; {{ now.Format "2006" }} <a href="https://github.com/{{.Site.Params.github}}">{{ .Site.Params.author }}.</a>
+    <!-- Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> using the <a href="https://github.com/arjunkrishnababu96/basics" target="_blank">Basics</a> theme. -->
+  </small>
+</footer>
+</div> <!-- closes the outer/inner div -->
 
-    <!-- load bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="http://netdna.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
-   
-    {{ with .Site.Params.googleAnalytics }}
-    {{ "<!-- Google Analytics -->" | safeHTML }}
-      <script>
-        var _gaq=[['_setAccount','{{ . }}'],['_trackPageview']];
-        (function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];
-        g.src=('https:'==location.protocol?'//ssl':'//www')+'.google-analytics.com/ga.js';
-        s.parentNode.insertBefore(g,s)}(document,'script'));
-      </script>
-    {{ end }}
-  
-  </body>
+<!-- load bootstrap JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+  crossorigin="anonymous"></script>
+<script src="http://netdna.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+
+{{ with .Site.Params.googleAnalytics }}
+{{ "<!-- Global site tag (gtag.js) - Google Analytics -->" | safeHTML }}
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ . }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag() { dataLayer.push(arguments); }
+  gtag('js', new Date());
+
+  gtag('config', '{{ . }}');
+</script>
+{{ end }}
+
+
+</body>
+
 </html>
