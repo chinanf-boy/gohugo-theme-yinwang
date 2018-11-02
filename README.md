@@ -51,15 +51,22 @@ baseURL = "http://example.org/"
 languageCode = "en-us"
 title = "我是"
 theme = "yinwang"
+#pygmentsCodeFences = true
+#pygmentsCodefencesGuessSyntax = false
+#pygmentsStyle = "dracula"
+#pygmentsOptions = ['linenos']
+# 代码高亮/chroma，hugo默认自带
 
 [params]
     author = "yobrave Lee"
     github = "chinanf-boy"
     # gitlab = "yobrave"
-    highlight = "dracula" # default use `github` style
+    #googleAnalytics = "****" 
+    # 谷歌统计
+    highlight = "dracula" # 默认样式 `github`
     langs = ["go"]
-    # 默认加载 highlight.min.js ，但 一些不支持的语言, 你自己添加
-
+    # 默认加载 highlight.min.js，但 一些不支持的语言, 你自己添加, 
+    # 其实也可以使用hugo自带的语法高亮器设置，不过我有点懒
     # single = false
     # 单页面的Home 按钮去除
     # menus = true
@@ -68,9 +75,9 @@ theme = "yinwang"
 
 ## 常见问题
 
-- **0. :** 想加统计脚本?
+- **0. :** 想加其他统计脚本?
 
-关于谷歌或百度的统计工具，因为我很少用，若有需要可添加到[header.html](./layouts/partials/header.html)，再加个配置**config.toml**可控私人ID，就好，等你PR噢
+关于百度的统计工具，因为我很少用，若有需要可添加到[footer.html](./layouts/partials/footer.html)，再加个配置**config.toml**可控私人ID，就好，等你PR噢
 
 - **1. :** 我 想正常添加，更多目录
 
