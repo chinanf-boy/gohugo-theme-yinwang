@@ -15,7 +15,7 @@ body {
 }
 
 body.mobile {
-    font-size: 36px;
+    font-size: 4rem;
 }
 
 .navbar-brand {
@@ -61,11 +61,11 @@ li.title:hover {
 }
 
 body.mobile .navbar-brand {
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 
 body.mobile .navbar-nav {
-    font-size: 36px;
+    font-size: 3.6rem;
 }
 
 div.outer {
@@ -73,5 +73,5 @@ div.outer {
 }
 
 body.mobile div.outer {
-    margin: 8rem 2% 2% 2%;
+    margin: 8.2rem 1rem 1rem 1rem;
 }
