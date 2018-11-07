@@ -71,6 +71,8 @@ theme = "yinwang"
     # 单页面的Home 按钮去除
     # menus = true
     # 我 想加更多目录
+    # backgroundColor = "#fbf6ec"
+    # 加点黄黄的背景色
 ```
 
 ## 常见问题

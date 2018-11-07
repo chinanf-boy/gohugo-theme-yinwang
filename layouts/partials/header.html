@@ -3,6 +3,7 @@
 
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    {{ with .Site.LanguageCode }}<meta http-equiv="content-language" content="{{ . }}" />{{ end }}
     {{ if .IsHome }}
     <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=1, user-scalable=no">
     {{ else }}
@@ -29,8 +30,15 @@
     <script>hljs.initHighlightingOnLoad();</script>
     <link rel="stylesheet" href="/css/main.css">
     {{ end }}
-
+    {{ with .Site.Params.backgroundColor }}
+    <style>
+        body {
+            background-color: {{ . }};
+        }
+    </style>
+    {{end}}
 </head>
+
 
 <body>
     <script>
