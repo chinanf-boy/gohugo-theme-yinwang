@@ -98,8 +98,9 @@ css: # 当你输入这个字段，会覆盖掉默认css文件
 
 </details>
 
-v
-[网页可看](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
+<br />
+
+[网页可看:css格式添加说明](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
 
 ## 常见问题
 
