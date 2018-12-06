@@ -61,11 +61,11 @@ theme = "yinwang"
     author = "yobrave Lee"
     github = "chinanf-boy"
     # gitlab = "yobrave"
-    #googleAnalytics = "****" 
+    #googleAnalytics = "****"
     # 谷歌统计gtag
     highlight = "dracula" # 默认样式 `github`
     langs = ["go"]
-    # 默认加载 highlight.min.js，但 一些不支持的语言, 你自己添加, 
+    # 默认加载 highlight.min.js，但 一些不支持的语言, 你自己添加,
     # 其实也可以使用hugo自带的语法高亮器设置，不过我有点懒
     # single = false
     # 单页面的Home 按钮去除
@@ -75,15 +75,41 @@ theme = "yinwang"
     # 加点黄黄的背景色
 ```
 
+### 提示
+
+- **1.** 单文件页面，添加独有的 css 文件
+
+可通过`css`来完成，点击以下例子
+
+<details>
+
+```  yaml
+title: 'NES.css 任天堂风格css框架 Yummy'
+date: 2018-12-06T12:23:36+08:00
+categories: ['css']
+tags: ['NES']
+description: 'NES.css 任天堂风格css框架'
+css: # 当你输入这个字段，会覆盖掉默认css文件
+  [
+    '/css/main.css', # 这个就是默认css文件
+    'https://unpkg.com/nes.css@0.0.2/css/nes.min.css',
+  ]
+```
+
+</details>
+
+v
+[网页可看](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
+
 ## 常见问题
 
 - **0. :** 想加其他统计脚本?
 
-关于百度的统计工具，因为我很少用，若有需要可添加到[footer.html](./layouts/partials/footer.html)，再加个配置**config.toml**可控私人ID，就好，等你PR噢
+关于百度的统计工具，因为我很少用，若有需要可添加到[footer.html](./layouts/partials/footer.html)，再加个配置**config.toml**可控私人 ID，就好，等你 PR 噢
 
 - **1. :** 我 想正常添加，更多目录
 
-``` toml
+```toml
 [params]
     menus = true
 
@@ -98,20 +124,18 @@ url = "/tags"
 [[menu.main]]
   name = "Home"
   url = "/"
-  # weight = 10 
+  # weight = 10
 # 这个权重，是衡量顺序的
-``` 
+```
 
+> 提示：main 的 html 顺序是相反的, 若想自定义顺序，添加 **权重值**
 
-> 提示：main的html顺序是相反的, 若想自定义顺序，添加 **权重值**
+- **2. :** 我 想单页面的 Home 按钮去除
 
-
-- **2. :** 我 想单页面的Home 按钮去除
-
-``` toml
+```toml
 [params]
     single = false
-``` 
+```
 
 ### 本主题
 

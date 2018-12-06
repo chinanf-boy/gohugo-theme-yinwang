@@ -13,6 +13,7 @@
     <title>{{.Title}}</title>
     <link rel="stylesheet" href="/css/stylesheet.css">
 
+
     {{ if .IsHome }}
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
@@ -28,13 +29,18 @@
     
     
     <script>hljs.initHighlightingOnLoad();</script>
-    <link rel="stylesheet" href="/css/main.css">
+    {{ if .Params.css }}
+        {{range .Params.css }} <link rel="stylesheet" href="{{ . }}"></link>{{ end }}
+    {{ else }}
+        <link rel="stylesheet" href="/css/main.css">
+    {{end}}
+
     {{ end }}
     {{ with .Site.Params.backgroundColor }}
     <style>
         body {
             background-color: {{ . }};
-        }
+            }
     </style>
     {{end}}
 </head>
