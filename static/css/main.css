@@ -140,10 +140,14 @@ pre {
 
 code {
   font-family: Inconsolata, Consolas, 'DEJA VU SANS MONO', 'DROID SANS MONO',
-    Proggy, monospace;
-  background-color: #eff0f1;
+  Proggy, monospace;
   white-space: pre-wrap;
   padding: 1px 5px;
+}
+
+p code {
+  background-color: #eff0f1;
+  border-radius: 3px;
 }
 
 a {
