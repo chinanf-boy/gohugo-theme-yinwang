@@ -75,9 +75,42 @@ theme = "yinwang"
     # 加点黄黄的背景色
 ```
 
-### 提示
+### 功能添加
 
-- **1.** 单文件页面，添加独有的 css 文件
+- **1.** 可通过`<rawhtml>`短语添加`html`内容
+
+> 注意,只需要一个`<rawhtml>`,同时注意换行不要接-多个空格。(这个Hugo功能我也没怎么搞懂，写法不对请指出)
+
+``` html
+<rawhtml>
+<style> 
+div.inner {
+margin: 0 4%; 
+}
+tr td:nth-child(2n){
+background-color: #ffdfac;
+}
+tr td:not(:first-child) code {
+background-color: #ffdfac;
+font-size: 14px;
+margin: 1px;
+display: block;
+padding: 5px;
+text-align: center;
+}
+tr th:not(:first-child)  {
+width:14%;
+}
+th {
+    position: static;
+}
+</style>
+```
+
+> 具体例子:[llever.com](http://llever.com/2018/12/11/译搜索工具的功能比较/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/译-搜索工具的功能比较.md)
+
+
+- **2.** 单文件页面，添加独有的 css 文件
 
 可通过`css`来完成，点击以下例子
 
