@@ -124,7 +124,8 @@ tags: ['NES']
 description: 'NES.css 任天堂风格css框架'
 css: # 当你输入这个字段，会覆盖掉默认css文件
   [
-    '/css/main.css', # 这个就是默认css文件
+    '/css/main.css', # 这个就是默认，只在博文页面 css文件
+    '/css/stylesheet.css'  # 这个用来存有主页与博文，相同的css格式的文件
     'https://unpkg.com/nes.css@0.0.2/css/nes.min.css',
   ]
 ```
