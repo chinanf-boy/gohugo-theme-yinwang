@@ -4,13 +4,18 @@
   <div class="outer">
   <ul class="list-group">
     {{ range where .Pages.ByDate.Reverse "Section" "post" }}
+
     <li class="list-group-item title">
       <!-- <div class="row" id="posts">
         <div class="d-none d-sm-block col-sm-3 date-time-title"> -->
          
         <!-- </div> -->
         <!-- <div class="col-sm date-time-title post"> -->
-          <a href="{{ .URL }}"><time style="color:black;">{{ .Date.Format "2006-01-02" }}</time>  / {{ .Title }} </a>
+            {{if .Params.series }}
+                <a href="{{ .URL }}" data-series="{{ .Params.series }}" style="margin-left:1rem;"><time style="color:black;">{{ .Date.Format "2006-01-02" }}</time>  / {{ .Title }} </a>
+              {{ else}}
+                <a href="{{ .URL }}"><time style="color:black;">{{ .Date.Format "2006-01-02" }}</time>  / {{ .Title }} </a>
+            {{ end}}
         <!-- </div> -->
       <!-- </div> -->
     </li>

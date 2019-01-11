@@ -143,6 +143,14 @@ css: # 当你输入这个字段，会覆盖掉默认css文件
 
 [网页可看:css格式添加说明](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
 
+- **4.** `series`系列博文
+
+```
+series: "我是系列博文哦"
+```
+
+> 具体操作可看[llever.com](http://llever.com/2019/01/11/%E7%B3%BB%E5%88%97-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-hugo-theme/)，与 [js脚本](./layouts/partials/footer.html#L27)
+
 ## 常见问题
 
 - **0. :** 想加其他统计脚本?

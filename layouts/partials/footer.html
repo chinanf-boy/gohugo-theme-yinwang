@@ -1,6 +1,6 @@
 <footer>
   <hr>
-  <small style="font-size:16px;float:right;margin:1rem;">
+  <small style="font-size:16px;float:right;margin:0 1rem;">
     &copy; {{ now.Format "2006" }} <a href="https://github.com/{{.Site.Params.github}}">{{ .Site.Params.author }}.</a>
     <!-- Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> using the <a href="https://github.com/arjunkrishnababu96/basics" target="_blank">Basics</a> theme. -->
   </small>
@@ -23,6 +23,51 @@
   gtag('config', '{{ . }}');
 </script>
 {{ end }}
+
+<!-- series Posts -->
+<script>
+ (function(){
+  var seriesA = document.getElementsByTagName("a");
+  seriesA = Array.from(seriesA).filter(x =>x.getAttribute("data-series"));
+  if(seriesA.length){
+    var nameSeries = {}
+    seriesA.forEach(x =>{
+      var xdata = x.getAttribute("data-series")
+      if(nameSeries[xdata]){
+        nameSeries[xdata].push(x)
+      }else{
+        nameSeries[xdata] = [x]
+      }
+    })
+  }
+
+  function createE(){
+    var detailsArr = [] // full html
+    var postPosArr = [] // outerHTML
+    for(let i in nameSeries){
+      var dcreateE = document.createElement("details")
+      var screateE = document.createElement("summary")
+      screateE.textContent = i;
+      var inner = screateE.outerHTML + "<br >" // details innerHTML
+
+      nameSeries[i].forEach(x =>{
+        inner += x.outerHTML
+        x.parentElement.style.display = "none"
+      })
+      postPosArr.push(nameSeries[i][0])
+      dcreateE.innerHTML = inner
+      detailsArr.push(dcreateE)
+    }
+    console.info(postPosArr)
+    console.log(detailsArr[0])
+    postPosArr.forEach(a =>{
+      a.parentElement.style.display = "block"
+      a.outerHTML = detailsArr.shift().outerHTML
+    })
+  }
+  createE()
+ })()
+</script>
 
 
 </body>
