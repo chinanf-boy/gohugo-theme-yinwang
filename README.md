@@ -1,8 +1,8 @@
 ## hugo 的 yinwang.org 博客主题
 
-<img style="width:69%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/tn.png">
+<img style="width:49%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/tn.png">
 
-<img style="width:80%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/screenshot.png">
+<img style="width:49%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/screenshot.png">
 
 ### hugo 准备
 
@@ -12,25 +12,25 @@
 
 ### 主题下载
 
-0. 记得初始化
+- **0. 记得初始化**
 
 ```bash
 git init
 ```
 
-1. 加入子模块
+- **1. 加入子模块**
 
 ```
 git submodule add https://github.com/chinanf-boy/gohugo-theme-yinwang.git themes/yinwang;
 ```
 
-2. 主题设置
+- **2. 主题设置**
 
 ```
 echo 'theme = "yinwang"' >> config.toml
 ```
 
-2.1 加个文章
+- **2.1 加个文章**
 
 ```
 hugo new post/hello.md
@@ -38,7 +38,7 @@ hugo new post/hello.md
 
 > 最好再加个`about.md`
 
-3. 服务器启动
+- **3. 服务器启动**
 
 ```
 hugo server -D
@@ -79,6 +79,8 @@ theme = "yinwang"
 
 - **1.** 可通过`<rawhtml>`短语添加`html`内容
 
+<details>
+
 > 注意,只需要一个`<rawhtml>`,同时注意换行不要接-多个空格。(这个Hugo功能我也没怎么搞懂，写法不对请指出)
 
 ``` html
@@ -108,6 +110,10 @@ th {
 ```
 
 > 具体例子:[llever.com](http://llever.com/2018/12/11/译搜索工具的功能比较/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/译-搜索工具的功能比较.md)
+
+</details>
+
+<br >
 
 - **2.** 使用`rawcss`，使用css内容(主要是修复`< >`符号的转义问题)
 
