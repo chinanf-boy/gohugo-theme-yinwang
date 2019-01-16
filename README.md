@@ -1,8 +1,10 @@
 ## hugo 的 yinwang.org 博客主题
 
-<img style="width:49%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/tn.png">
+<p>
+<img width="49%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/tn.png">
 
-<img style="width:49%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/screenshot.png">
+<img width="49%" src="https://raw.githubusercontent.com/chinanf-boy/gohugo-theme-yinwang/master/images/screenshot.png">
+</p>
 
 ### hugo 准备
 
@@ -195,4 +197,4 @@ url = "/tags"
 
 ### 本主题
 
-是由[basics](https://github.com/arjunkrishnababu96/basics)hugo 主题, 拿来改的
+是由[basics](https://github.com/arjunkrishnababu96/basics) hugo 主题, 拿来改的
