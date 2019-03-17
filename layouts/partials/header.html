@@ -17,8 +17,8 @@
     {{ if .IsHome }}
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="/css/stylesheet.css">
-    <link rel="stylesheet" href="/css/home.css">
+    <link rel="stylesheet" href="{{.Site.BaseURL}}/css/stylesheet.css">
+    <link rel="stylesheet" href="{{.Site.BaseURL}}/css/home.css">
 
     {{ else }}
     {{ with .Site.Params.highlight | default "github" }}
@@ -32,7 +32,7 @@
     {{ if .Params.css }}
         {{range .Params.css }} <link rel="stylesheet" href="{{ . }}"></link>{{ end }}
     {{ else }}
-        <link rel="stylesheet" href="/css/main.css">
+        <link rel="stylesheet" href="{{.Site.BaseURL}}/css/main.css">
     {{end}}
 
     {{ end }}
@@ -84,7 +84,7 @@
                     <span class="big-icon icon-bar"></span>
 
                 </button>
-                <a class="navbar-brand" href="/">{{ .Site.Title | default "Basics"}}</a>
+                <a class="navbar-brand" href="{{.Site.BaseURL}}">{{ .Site.Title | default "Basics"}}</a>
             </div>
 
             <div class="navbar-collapse collapse" id="bs-example-navbar-collapse-1" style="height: auto;">
@@ -92,16 +92,16 @@
                     {{ if .Site.Params.menus }}
                         {{with .Site.Menus.main }}
                             {{ range . }}
-                            <li class="{{ if eq .URL "/"}}active{{ end }}"><a href="{{.URL}}">{{.Name}}</a></li>
+                            <li class="{{ if eq .URL ""}}active{{ end }}"><a href="{{.URL}}">{{.Name}}</a></li>
                             {{ end }}
                         {{ end }}
                     {{ else }}
-                        <li class="{{ if eq .URL "/"}}active{{ end }}"><a class="nav-item nav-link" href="/">Home</a></li>
+                        <li class="{{ if eq .URL .Site.BaseURL }}active{{ end }}"><a class="nav-item nav-link" href="{{.Site.BaseURL}}">Home</a></li>
                         <li>{{ with .Site.Params.github }}<a class="nav-item nav-link" href="https://github.com/{{ . }}"
                                 target="_blank">GitHub</a>{{ end }}</li>
                         <li>{{ with .Site.Params.gitlab }}<a class="nav-item nav-link" href="https://gitlab.com/{{ . }}"
                                 target="_blank">GitLab</a>{{ end }}</li>
-                        <li class="{{ if eq .URL "/about/"}}active{{ end }}"><a class="nav-item nav-link" href="/about/">About</a></li>
+                        <li class="{{ if eq .URL "/about/" }} active{{ end }}"><a class="nav-item nav-link" href="{{.Site.BaseURL}}/about/">About</a></li>
                     {{ end }}
                 </ul>
             </div>
@@ -112,9 +112,9 @@
 
     {{ if .IsHome }}
     <!-- <section id="page-title">
-          <h1><a href="/">{{ .Site.Title | default "Basics"}}</a></h1>
+          <h1><a href="">{{ .Site.Title | default "Basics"}}</a></h1>
           <span id="author-name">
-            <h6><a href="/about/">{{ .Site.Params.Author }}</a></h6>
+            <h6><a href="about/">{{ .Site.Params.Author }}</a></h6>
           </span>
         </section> -->
     {{ end }}
