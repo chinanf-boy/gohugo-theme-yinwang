@@ -8,7 +8,7 @@ function clearTooltip(e) {
   e.currentTarget.removeAttribute('aria-label');
 }
 function showTooltip(elem, msg) {
-  elem.setAttribute('class', 'btn tooltipped tooltipped-s');
+  elem.setAttribute('class', 'btn tooltipped tooltipped-w');
   elem.setAttribute('aria-label', msg);
 }
 function fallbackMessage(action) {
