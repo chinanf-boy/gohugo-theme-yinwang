@@ -21,6 +21,21 @@
     <link rel="stylesheet" href="{{.Site.BaseURL}}/css/home.css">
 
     {{ else }}
+
+        {{ if .Site.Params.copyCode}}
+        <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
+        <link href="https://clipboardjs.com/bower_components/primer-css/css/primer.css" rel="stylesheet">
+        <!-- 添加 clipboard 复制按钮 -->
+        {{end}}
+        
+        <!-- 单博文 css 文件  -->
+        {{ if .Params.css }}
+            {{range .Params.css }} <link rel="stylesheet" href="{{ . }}"></link>{{ end }}
+        {{ else }}
+            <link rel="stylesheet" href="{{.Site.BaseURL}}/css/main.css">
+        {{end}}
+
+        <!-- 代码高亮风格 -->
     {{ with .Site.Params.highlight | default "github" }}
     <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css" rel="stylesheet">
     {{end}}
@@ -29,13 +44,10 @@
     
     
     <script>hljs.initHighlightingOnLoad();</script>
-    {{ if .Params.css }}
-        {{range .Params.css }} <link rel="stylesheet" href="{{ . }}"></link>{{ end }}
-    {{ else }}
-        <link rel="stylesheet" href="{{.Site.BaseURL}}/css/main.css">
-    {{end}}
 
     {{ end }}
+
+    <!-- 多点背景色，不要老白老白的 -->
     {{ with .Site.Params.backgroundColor }}
     <style>
         body {
@@ -70,7 +82,9 @@
                 }else{
                     document.body.classList.remove('mobile');  
                 }
-        }</script>
+    }</script>
+
+    <!-- 只有在首页才给出，导航条 -->
     {{ if .IsHome }}
     <nav class="navbar navbar-default navbar-fixed-top" style="opacity: .9" role="navigation">
         <div class="container-fluid">

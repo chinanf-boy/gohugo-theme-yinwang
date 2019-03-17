@@ -38,7 +38,7 @@ echo 'theme = "yinwang"' >> config.toml
 hugo new post/hello.md
 ```
 
-> 注意⚠️:是`post`目录，最好再加个`hugo new about.md`
+> 注意 ⚠️:是`post`目录，最好再加个`hugo new about.md`
 
 - **3. 服务器启动**
 
@@ -80,10 +80,9 @@ theme = "yinwang"
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
-
 - [功能添加](#%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0)
   - [**1.** 可通过`<rawhtml>`短语添加`html`内容](#1-%E5%8F%AF%E9%80%9A%E8%BF%87rawhtml%E7%9F%AD%E8%AF%AD%E6%B7%BB%E5%8A%A0html%E5%86%85%E5%AE%B9)
-  - [**2.** 使用`rawcss`，使用css内容(主要是修复`< >`符号的转义问题)](#2-%E4%BD%BF%E7%94%A8rawcss%E4%BD%BF%E7%94%A8css%E5%86%85%E5%AE%B9%E4%B8%BB%E8%A6%81%E6%98%AF%E4%BF%AE%E5%A4%8D-%E7%AC%A6%E5%8F%B7%E7%9A%84%E8%BD%AC%E4%B9%89%E9%97%AE%E9%A2%98)
+  - [**2.** 使用`rawcss`，使用 css 内容(主要是修复`< >`符号的转义问题)](#2-%E4%BD%BF%E7%94%A8rawcss%E4%BD%BF%E7%94%A8css%E5%86%85%E5%AE%B9%E4%B8%BB%E8%A6%81%E6%98%AF%E4%BF%AE%E5%A4%8D-%E7%AC%A6%E5%8F%B7%E7%9A%84%E8%BD%AC%E4%B9%89%E9%97%AE%E9%A2%98)
   - [**3.** 单文件页面，添加独有的 css 文件](#3-%E5%8D%95%E6%96%87%E4%BB%B6%E9%A1%B5%E9%9D%A2%E6%B7%BB%E5%8A%A0%E7%8B%AC%E6%9C%89%E7%9A%84-css-%E6%96%87%E4%BB%B6)
   - [**4.** `series`系列博文](#4-series%E7%B3%BB%E5%88%97%E5%8D%9A%E6%96%87)
   - [**5.** 编辑按钮](#5-%E7%BC%96%E8%BE%91%E6%8C%89%E9%92%AE)
@@ -102,32 +101,33 @@ theme = "yinwang"
 
 <details>
 
-> 注意,只需要一个`<rawhtml>`,同时注意换行不要接-多个空格。(这个Hugo功能我也没怎么搞懂，写法不对请指出)
+> 注意,只需要一个`<rawhtml>`,同时注意换行不要接-多个空格。(这个 Hugo 功能我也没怎么搞懂，写法不对请指出)
 
-``` html
+```html
 <rawhtml>
-<style> 
-div.inner {
-margin: 0 4%; 
-}
-tr td:nth-child(2n){
-background-color: #ffdfac;
-}
-tr td:not(:first-child) code {
-background-color: #ffdfac;
-font-size: 14px;
-margin: 1px;
-display: block;
-padding: 5px;
-text-align: center;
-}
-tr th:not(:first-child)  {
-width:14%;
-}
-th {
-    position: static;
-}
-</style>
+  <style>
+    div.inner {
+      margin: 0 4%;
+    }
+    tr td:nth-child(2n) {
+      background-color: #ffdfac;
+    }
+    tr td:not(:first-child) code {
+      background-color: #ffdfac;
+      font-size: 14px;
+      margin: 1px;
+      display: block;
+      padding: 5px;
+      text-align: center;
+    }
+    tr th:not(:first-child) {
+      width: 14%;
+    }
+    th {
+      position: static;
+    }
+  </style></rawhtml
+>
 ```
 
 > 具体例子:[llever.com](http://llever.com/2018/12/11/译搜索工具的功能比较/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/译-搜索工具的功能比较.md)
@@ -136,7 +136,7 @@ th {
 
 <br >
 
-### **2.** 使用`rawcss`，使用css内容(主要是修复`< >`符号的转义问题)
+### **2.** 使用`rawcss`，使用 css 内容(主要是修复`< >`符号的转义问题)
 
 ```
 {{% rawcss %}}.blog-post > h2:first-child {display:none}{{% /rawcss %}}
@@ -150,7 +150,7 @@ th {
 
 <details>
 
-```  yaml
+```yaml
 title: 'NES.css 任天堂风格css框架 Yummy'
 date: 2018-12-06T12:23:36+08:00
 categories: ['css']
@@ -168,9 +168,9 @@ css: # 当你输入这个字段，会覆盖掉默认css文件
 
 <br />
 
-[网页可看:css格式添加说明](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
+[网页可看:css 格式添加说明](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
 
-> 注意⚠️:若你的`baseURL`不是根目录，留心`'/css/main.css'`的前路径。[看看具体操作]((#3--%E6%88%91%E8%A6%81%E6%9C%80%E7%BB%88%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E7%9A%84baseurl%E9%85%8D%E7%BD%AE%E4%B8%8D%E6%98%AF%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%BD%86%E6%88%91%E5%8F%88%E6%83%B3%E7%94%A8%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8))
+> 注意 ⚠️:若你的`baseURL`不是根目录，留心`'/css/main.css'`的前路径。[看看具体操作](<(#3--%E6%88%91%E8%A6%81%E6%9C%80%E7%BB%88%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E7%9A%84baseurl%E9%85%8D%E7%BD%AE%E4%B8%8D%E6%98%AF%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%BD%86%E6%88%91%E5%8F%88%E6%83%B3%E7%94%A8%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8)>)
 
 ### **4.** `series`系列博文
 
@@ -178,7 +178,7 @@ css: # 当你输入这个字段，会覆盖掉默认css文件
 series: "我是系列博文哦"
 ```
 
-> 具体操作可看[llever.com](http://llever.com/2019/01/11/%E7%B3%BB%E5%88%97-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-hugo-theme/)，与 [js脚本](./layouts/partials/footer.html#L27)
+> 具体操作可看[llever.com](http://llever.com/2019/01/11/%E7%B3%BB%E5%88%97-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-hugo-theme/)，与 [js 脚本](./layouts/partials/footer.html#L27)
 
 ### **5.** 编辑按钮
 
@@ -188,6 +188,12 @@ series: "我是系列博文哦"
 ```
 
 > `githubRepo` 与 `editBtn` 要一起使用，才能发挥作用。
+
+### **6.** 复制代码
+
+```toml
+    copyCode = true
+```
 
 ## 常见问题
 
