@@ -80,12 +80,14 @@ theme = "yinwang"
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
 
+
 - [功能添加](#%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0)
   - [**1.** 可通过`<rawhtml>`短语添加`html`内容](#1-%E5%8F%AF%E9%80%9A%E8%BF%87rawhtml%E7%9F%AD%E8%AF%AD%E6%B7%BB%E5%8A%A0html%E5%86%85%E5%AE%B9)
-  - [**2.** 使用`rawcss`，使用 css 内容(主要是修复`< >`符号的转义问题)](#2-%E4%BD%BF%E7%94%A8rawcss%E4%BD%BF%E7%94%A8css%E5%86%85%E5%AE%B9%E4%B8%BB%E8%A6%81%E6%98%AF%E4%BF%AE%E5%A4%8D-%E7%AC%A6%E5%8F%B7%E7%9A%84%E8%BD%AC%E4%B9%89%E9%97%AE%E9%A2%98)
+  - [**2.** 使用`rawcss`，使用 css 内容(主要是修复`< >`符号的转义问题)](#2-%E4%BD%BF%E7%94%A8rawcss%E4%BD%BF%E7%94%A8-css-%E5%86%85%E5%AE%B9%E4%B8%BB%E8%A6%81%E6%98%AF%E4%BF%AE%E5%A4%8D-%E7%AC%A6%E5%8F%B7%E7%9A%84%E8%BD%AC%E4%B9%89%E9%97%AE%E9%A2%98)
   - [**3.** 单文件页面，添加独有的 css 文件](#3-%E5%8D%95%E6%96%87%E4%BB%B6%E9%A1%B5%E9%9D%A2%E6%B7%BB%E5%8A%A0%E7%8B%AC%E6%9C%89%E7%9A%84-css-%E6%96%87%E4%BB%B6)
   - [**4.** `series`系列博文](#4-series%E7%B3%BB%E5%88%97%E5%8D%9A%E6%96%87)
   - [**5.** 编辑按钮](#5-%E7%BC%96%E8%BE%91%E6%8C%89%E9%92%AE)
+  - [**6.** 复制代码](#6-%E5%A4%8D%E5%88%B6%E4%BB%A3%E7%A0%81)
 - [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
   - [**0. :** 想加其他统计脚本?](#0--%E6%83%B3%E5%8A%A0%E5%85%B6%E4%BB%96%E7%BB%9F%E8%AE%A1%E8%84%9A%E6%9C%AC)
   - [**1. :** 我 想正常添加，更多目录](#1--%E6%88%91-%E6%83%B3%E6%AD%A3%E5%B8%B8%E6%B7%BB%E5%8A%A0%E6%9B%B4%E5%A4%9A%E7%9B%AE%E5%BD%95)
