@@ -283,3 +283,12 @@ kbd {
   box-shadow: 0 1px 0 rgba(12, 13, 14, 0.2), 0 0 0 2px #fff inset;
   white-space: nowrap;
 }
+
+#edit-button{
+  font-size:16px;
+  float:right;
+  margin:0 1rem;
+  background: #cfd7ff;
+  border: 1px solid #4e57ef;
+  box-shadow: 3px 4px 0px #4e57ef;
+}

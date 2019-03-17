@@ -38,7 +38,7 @@ echo 'theme = "yinwang"' >> config.toml
 hugo new post/hello.md
 ```
 
-> 最好再加个`about.md`
+> 注意⚠️:是`post`目录，最好再加个`hugo new about.md`
 
 - **3. 服务器启动**
 
@@ -50,36 +50,51 @@ hugo server -D
 
 ```toml
 baseURL = "http://example.org/"
-languageCode = "en-us"
+languageCode = "zh-CN"
 title = "我是"
 theme = "yinwang"
 #pygmentsCodeFences = true
 #pygmentsCodefencesGuessSyntax = false
 #pygmentsStyle = "dracula"
 #pygmentsOptions = ['linenos']
-# 代码高亮/chroma，hugo默认自带
+# 代码高亮/chroma，hugo默认自带（可选）
 
 [params]
     author = "yobrave Lee"
     github = "chinanf-boy"
     # gitlab = "yobrave"
-    #googleAnalytics = "****"
-    # 谷歌统计gtag
+    googleAnalytics = "UA-128555056-1" # 谷歌统计gtag
     highlight = "dracula" # 默认样式 `github`
     langs = ["go"]
     # 默认加载 highlight.min.js，但 一些不支持的语言, 你自己添加,
     # 其实也可以使用hugo自带的语法高亮器设置，不过我有点懒
-    # single = false
-    # 单页面的Home 按钮去除
-    # menus = true
-    # 我 想加更多目录
-    # backgroundColor = "#fbf6ec"
-    # 加点黄黄的背景色
+    # single = false # 单页面的Home 按钮去除
+    # menus = true # 想加更多目录，具体请看常见问题中的更多配置
+    backgroundColor = "#fbf6ec" # 加点黄黄的背景色
+    githubRepo = "https://github.com/chinanf-boy/html-css-list"
+    editBtn = true # 两个字段一起，才能搞好编辑按钮
 ```
 
-### 功能添加
+## 小目录
 
-- **1.** 可通过`<rawhtml>`短语添加`html`内容
+<!-- START doctoc generated TOC please keep comment here to allow auto update -->
+<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
+
+
+- [功能添加](#%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0)
+  - [**1.** 可通过`<rawhtml>`短语添加`html`内容](#1-%E5%8F%AF%E9%80%9A%E8%BF%87rawhtml%E7%9F%AD%E8%AF%AD%E6%B7%BB%E5%8A%A0html%E5%86%85%E5%AE%B9)
+  - [**2.** 使用`rawcss`，使用css内容(主要是修复`< >`符号的转义问题)](#2-%E4%BD%BF%E7%94%A8rawcss%E4%BD%BF%E7%94%A8css%E5%86%85%E5%AE%B9%E4%B8%BB%E8%A6%81%E6%98%AF%E4%BF%AE%E5%A4%8D-%E7%AC%A6%E5%8F%B7%E7%9A%84%E8%BD%AC%E4%B9%89%E9%97%AE%E9%A2%98)
+  - [**3.** 单文件页面，添加独有的 css 文件](#3-%E5%8D%95%E6%96%87%E4%BB%B6%E9%A1%B5%E9%9D%A2%E6%B7%BB%E5%8A%A0%E7%8B%AC%E6%9C%89%E7%9A%84-css-%E6%96%87%E4%BB%B6)
+  - [**4.** `series`系列博文](#4-series%E7%B3%BB%E5%88%97%E5%8D%9A%E6%96%87)
+  - [**5.** 编辑按钮](#5-%E7%BC%96%E8%BE%91%E6%8C%89%E9%92%AE)
+- [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
+- [本主题来源](#%E6%9C%AC%E4%B8%BB%E9%A2%98%E6%9D%A5%E6%BA%90)
+
+<!-- END doctoc generated TOC please keep comment here to allow auto update -->
+
+## 功能添加
+
+### **1.** 可通过`<rawhtml>`短语添加`html`内容
 
 <details>
 
@@ -117,7 +132,7 @@ th {
 
 <br >
 
-- **2.** 使用`rawcss`，使用css内容(主要是修复`< >`符号的转义问题)
+### **2.** 使用`rawcss`，使用css内容(主要是修复`< >`符号的转义问题)
 
 ```
 {{% rawcss %}}.blog-post > h2:first-child {display:none}{{% /rawcss %}}
@@ -125,7 +140,7 @@ th {
 
 > 具体例子: [llever.com](http://llever.com/2018/12/28/rust-官方学习索引译-copy/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/Rust-%E5%AE%98%E6%96%B9%E5%AD%A6%E4%B9%A0%E7%B4%A2%E5%BC%95.md)
 
-- **3.** 单文件页面，添加独有的 css 文件
+### **3.** 单文件页面，添加独有的 css 文件
 
 可通过`css`来完成，点击以下例子
 
@@ -151,13 +166,22 @@ css: # 当你输入这个字段，会覆盖掉默认css文件
 
 [网页可看:css格式添加说明](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
 
-- **4.** `series`系列博文
+### **4.** `series`系列博文
 
 ```
 series: "我是系列博文哦"
 ```
 
 > 具体操作可看[llever.com](http://llever.com/2019/01/11/%E7%B3%BB%E5%88%97-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-hugo-theme/)，与 [js脚本](./layouts/partials/footer.html#L27)
+
+### **5.** 编辑按钮
+
+```toml
+    githubRepo = "https://github.com/chinanf-boy/html-css-list"
+    editBtn = true
+```
+
+> `githubRepo` 与 `editBtn` 要一起使用，才能发挥作用。具体实现：[css添加]() + [js脚本]()
 
 ## 常见问题
 
@@ -195,6 +219,6 @@ url = "/tags"
     single = false
 ```
 
-### 本主题
+## 本主题来源
 
 是由[basics](https://github.com/arjunkrishnababu96/basics) hugo 主题, 拿来改的

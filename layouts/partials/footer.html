@@ -69,6 +69,14 @@
  })()
 </script>
 
+<!-- // START - Edit Button -->
+{{if .Site.Params.githubRepo}}
+<script>
+        document.getElementById("edit-button").addEventListener("click", function () {
+            var editWindow = window.open("{{ .Site.Params.githubRepo }}/edit/master/src/{{ path.Base .URL }}.md");
+        });</script>
+{{ end }}
+    <!-- // END - Edit Button -->
 
 </body>
 
