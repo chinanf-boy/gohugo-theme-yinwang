@@ -34,6 +34,17 @@ body.mobile {
   padding: 15px 20px;
 }
 
+.title details{
+  /* background: #cfd7ff; */
+  border: 1px solid #4e57ef;
+  box-shadow: 3px 4px 0px #aaaab7;
+  line-height: 2em;
+}
+
+details a {
+  margin-top: 1.5rem;
+}
+
 li.title:hover {
   background-color: #eee;
   font-size: 100%;

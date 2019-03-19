@@ -25,6 +25,7 @@
 {{ end }}
 
 <!-- series Posts -->
+{{ if .IsHome }}
 <script>
  (function(){
   var seriesA = document.getElementsByTagName("a");
@@ -48,7 +49,7 @@
       var dcreateE = document.createElement("details")
       var screateE = document.createElement("summary")
       screateE.textContent = i;
-      var inner = screateE.outerHTML + "<br >" // details innerHTML
+      var inner = screateE.outerHTML // details innerHTML
 
       nameSeries[i].forEach(x =>{
         inner += x.outerHTML
@@ -68,6 +69,7 @@
   createE()
  })()
 </script>
+{{ end }}
 
 <!-- // START - Edit Button -->
 {{if .Site.Params.githubRepo}}
