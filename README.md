@@ -64,7 +64,7 @@ theme = "yinwang"
     github = "chinanf-boy"
     # gitlab = "yobrave"
     googleAnalytics = "UA-128555056-1" # 谷歌统计gtag
-    highlight = "dracula" # 默认样式 `github`
+    highlight = "atom-one-dark" # 默认样式 `github`
     langs = ["go"]
     # 默认加载 highlight.min.js，但 一些不支持的语言, 你自己添加,
     # 其实也可以使用hugo自带的语法高亮器设置，不过我有点懒
