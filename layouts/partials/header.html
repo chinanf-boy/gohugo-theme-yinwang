@@ -17,8 +17,8 @@
     {{ if .IsHome }}
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
-    <link rel="stylesheet" href="{{.Site.BaseURL}}/css/stylesheet.css">
-    <link rel="stylesheet" href="{{.Site.BaseURL}}/css/home.css">
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/stylesheet.css">
+    <link rel="stylesheet" href="{{.Site.BaseURL}}css/home.css">
 
     {{ else }}
 
@@ -32,7 +32,7 @@
         {{ if .Params.css }}
             {{range .Params.css }} <link rel="stylesheet" href="{{ . }}"></link>{{ end }}
         {{ else }}
-            <link rel="stylesheet" href="{{.Site.BaseURL}}/css/main.css">
+            <link rel="stylesheet" href="{{.Site.BaseURL}}css/main.css">
         {{end}}
 
         <!-- 代码高亮风格 -->
@@ -115,7 +115,7 @@
                                 target="_blank">GitHub</a>{{ end }}</li>
                         <li>{{ with .Site.Params.gitlab }}<a class="nav-item nav-link" href="https://gitlab.com/{{ . }}"
                                 target="_blank">GitLab</a>{{ end }}</li>
-                        <li class="{{ if eq .URL "/about/" }} active{{ end }}"><a class="nav-item nav-link" href="{{.Site.BaseURL}}/about/">About</a></li>
+                        <li class="{{ if eq .URL "/about/" }} active{{ end }}"><a class="nav-item nav-link" href="{{.Site.BaseURL}}about/">About</a></li>
                     {{ end }}
                 </ul>
             </div>
