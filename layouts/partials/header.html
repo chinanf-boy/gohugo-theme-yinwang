@@ -21,6 +21,20 @@
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/home.css">
 
     {{ else }}
+        {{ with .Site.Params.anchorLink}}
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function(event) {
+                anchors.options = {
+                visible: 'hover',
+                placement: 'left',
+                icon: {{ . | default '¶'}}
+                };
+            anchors.add();
+            })
+        </script>
+        
+        {{end}}
 
         {{ if .Site.Params.copyCode}}
         <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
