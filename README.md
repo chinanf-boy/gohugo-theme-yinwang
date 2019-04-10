@@ -73,6 +73,8 @@ theme = "yinwang"
     backgroundColor = "#fbf6ec" # 加点黄黄的背景色
     githubRepo = "https://github.com/chinanf-boy/html-css-list"
     editBtn = true # 两个字段一起，才能搞好编辑按钮
+    anchorLink = "¶" # 瞄点链接
+    copyCode = true # 代码复制按钮
 ```
 
 ## 小目录
