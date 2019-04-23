@@ -42,6 +42,16 @@
         <!-- 添加 clipboard 复制按钮 -->
         {{end}}
         
+
+        <!-- 多点背景色，不要老白老白的 -->
+        {{ with .Site.Params.backgroundColor }}
+        <style>
+            body {
+                background-color: {{ . }};
+                }
+        </style>
+        {{end}}
+        
         <!-- 单博文 css 文件  -->
         {{ if .Params.css }}
             {{range .Params.css }} <link rel="stylesheet" href="{{ . }}"></link>{{ end }}
@@ -61,14 +71,6 @@
 
     {{ end }}
 
-    <!-- 多点背景色，不要老白老白的 -->
-    {{ with .Site.Params.backgroundColor }}
-    <style>
-        body {
-            background-color: {{ . }};
-            }
-    </style>
-    {{end}}
 </head>
 
 
