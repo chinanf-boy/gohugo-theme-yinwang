@@ -11,15 +11,21 @@
     {{ end }}
     <!-- load bootstrap css -->
     <title>{{.Title}}</title>
-    
-
 
     {{ if .IsHome }}
+    
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/stylesheet.css">
     <link rel="stylesheet" href="{{.Site.BaseURL}}css/home.css">
 
+    <!-- 多点背景色，不要老白老白的 -->
+    {{ with .Site.Params.backgroundColor }}
+    <style type="text/css">
+    body {background-color: {{ . }};}
+    </style>
+    {{end}}
+    
     {{ else }}
         {{ with .Site.Params.anchorLink}}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
@@ -42,16 +48,13 @@
         <!-- 添加 clipboard 复制按钮 -->
         {{end}}
         
-
         <!-- 多点背景色，不要老白老白的 -->
         {{ with .Site.Params.backgroundColor }}
-        <style>
-            body {
-                background-color: {{ . }};
-                }
+        <style type="text/css">
+            body {background-color: {{ . }};}
         </style>
         {{end}}
-        
+
         <!-- 单博文 css 文件  -->
         {{ if .Params.css }}
             {{range .Params.css }} <link rel="stylesheet" href="{{ . }}"></link>{{ end }}
