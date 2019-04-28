@@ -69,7 +69,19 @@
   createE()
  })()
 </script>
-{{ end }}
+{{else}}
+
+{{if .Site.Params.imageZoom }}
+<script src="https://cdn.jsdelivr.net/npm/medium-zoom@1.0.4/dist/medium-zoom.min.js"></script>
+
+<script>
+  const zoom = mediumZoom()
+  
+  zoom.attach("img")
+</script>
+
+{{end}}
+
 
 <!-- // START - Edit Button -->
 {{if .Site.Params.githubRepo}}
@@ -79,6 +91,9 @@
         });</script>
 {{ end }}
     <!-- // END - Edit Button -->
+
+{{ end }}
+
 
 </body>
 

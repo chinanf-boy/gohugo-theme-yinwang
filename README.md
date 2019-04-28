@@ -75,6 +75,7 @@ theme = "yinwang"
     editBtn = true # 两个字段一起，才能搞好编辑按钮
     anchorLink = "¶" # 瞄点链接
     copyCode = true # 代码复制按钮
+    imageZoom = true # 图片点击 zoom 一下
 ```
 
 ## 小目录
