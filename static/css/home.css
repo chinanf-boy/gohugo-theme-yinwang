@@ -34,7 +34,7 @@ body.mobile {
   padding: 15px 20px;
 }
 
-.title details{
+.title details {
   /* background: #cfd7ff; */
   border: 1px solid #4e57ef;
   box-shadow: 3px 4px 0px #aaaab7;
@@ -93,4 +93,8 @@ body.mobile div.outer {
 body.mobile .big-icon {
   width: 4.3rem;
   height: 6px;
+}
+
+body.mobile .navbar-nav li {
+  margin-bottom: 1rem;
 }
