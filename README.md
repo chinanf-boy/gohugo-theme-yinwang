@@ -82,7 +82,7 @@ theme = "yinwang"
 
 现在，单页面，可覆盖`config.toml`的 **4 个** 配置。
 
-```toml
+```yml
 title: 'Water.css 为简单而生的 css 框架'
 date: 2019-04-29T21:50:59+08:00
 categories: ['css']
@@ -93,10 +93,10 @@ css:
     'https://watercss.netlify.com/dist/light.css',
   ]
 draft: false
-editBtn = false # 关闭
-anchorLink = false # 关闭
-copyCode = false # 关闭
-imageZoom = false # 关闭
+editBtn: false # 关闭
+anchorLink: false # 关闭
+copyCode: false # 关闭
+imageZoom: false # 关闭
 ```
 
 - [Demo](http://llever.com/2019/04/29/water.css-为简单文章而生的-css-框架/)
