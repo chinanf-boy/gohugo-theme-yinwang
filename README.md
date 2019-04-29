@@ -78,11 +78,33 @@ theme = "yinwang"
     imageZoom = true # 图片点击 zoom 一下
 ```
 
+### 单页面配置优先
+
+现在，单页面，可覆盖`config.toml`的 **4 个** 配置。
+
+```toml
+title: 'Water.css 为简单而生的 css 框架'
+date: 2019-04-29T21:50:59+08:00
+categories: ['css']
+tags: ['simple']
+description: '为简单文章而生的 css 框架'
+css:
+  [
+    'https://watercss.netlify.com/dist/light.css',
+  ]
+draft: false
+editBtn = false # 关闭
+anchorLink = false # 关闭
+copyCode = false # 关闭
+imageZoom = false # 关闭
+```
+
+- [Demo](http://llever.com/2019/04/29/water.css-为简单文章而生的-css-框架/)
+
 ## 小目录
 
 <!-- START doctoc generated TOC please keep comment here to allow auto update -->
 <!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
 
 - [功能添加](#%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0)
   - [**1.** 可通过`<rawhtml>`短语添加`html`内容](#1-%E5%8F%AF%E9%80%9A%E8%BF%87rawhtml%E7%9F%AD%E8%AF%AD%E6%B7%BB%E5%8A%A0html%E5%86%85%E5%AE%B9)
@@ -91,7 +113,7 @@ theme = "yinwang"
   - [**4.** `series`系列博文](#4-series%E7%B3%BB%E5%88%97%E5%8D%9A%E6%96%87)
   - [**5.** 编辑按钮](#5-%E7%BC%96%E8%BE%91%E6%8C%89%E9%92%AE)
   - [**6.** 复制代码](#6-%E5%A4%8D%E5%88%B6%E4%BB%A3%E7%A0%81)
-  - [**7.** `h*`元素的anchor](#7-h%E5%85%83%E7%B4%A0%E7%9A%84anchor)
+  - [**7.** `h*`元素的 anchor](#7-h%E5%85%83%E7%B4%A0%E7%9A%84anchor)
 - [常见问题](#%E5%B8%B8%E8%A7%81%E9%97%AE%E9%A2%98)
   - [**0. :** 想加其他统计脚本?](#0--%E6%83%B3%E5%8A%A0%E5%85%B6%E4%BB%96%E7%BB%9F%E8%AE%A1%E8%84%9A%E6%9C%AC)
   - [**1. :** 我 想正常添加，更多目录](#1--%E6%88%91-%E6%83%B3%E6%AD%A3%E5%B8%B8%E6%B7%BB%E5%8A%A0%E6%9B%B4%E5%A4%9A%E7%9B%AE%E5%BD%95)
@@ -201,7 +223,7 @@ series: "我是系列博文哦"
     copyCode = true
 ```
 
-### **7.** `h*`元素的anchor
+### **7.** `h*`元素的 anchor
 
 ```toml
     anchorLink = "¶" # 可以自己改为喜欢的字符
@@ -250,7 +272,7 @@ url = "/tags"
 - 一是 `hugo -b "/"`，构建静态文件(输入`-b`选项，换网址)命令；
 - 二是 `hugo server -D` 开发服务器命令
 
-> 警告⚠️: `baseURL`一定要有`/`结尾。
+> 警告 ⚠️: `baseURL`一定要有`/`结尾。
 
 ## 本主题来源
 

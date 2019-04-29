@@ -27,14 +27,17 @@
     {{end}}
     
     {{ else }}
-        {{ with .Site.Params.anchorLink}}
+
+        {{ if eq .Params.anchorlink false }}
+        
+        {{else if or (.Site.Params.anchorLink) (.Params.anchorlink) }}
         <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
                 anchors.options = {
                 visible: 'hover',
                 placement: 'left',
-                icon: {{ . | default '¶'}}
+                icon: {{ .Site.Params.anchorLink | or .Params.anchorlink | default '¶'}}
                 };
             anchors.add();
             })
@@ -42,12 +45,14 @@
         
         {{end}}
 
-        {{ if .Site.Params.copyCode}}
-        <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
-        <link href="https://clipboardjs.com/bower_components/primer-css/css/primer.css" rel="stylesheet">
-        <!-- 添加 clipboard 复制按钮 -->
-        {{end}}
+        {{ if eq .Params.copycode false }}
         
+        {{ else if or (.Site.Params.copyCode) (.Params.copycode) }}
+            <script src="https://cdn.bootcss.com/clipboard.js/2.0.4/clipboard.min.js"></script>
+            <link href="https://clipboardjs.com/bower_components/primer-css/css/primer.css" rel="stylesheet">
+            <!-- 添加 clipboard 复制按钮 -->
+        {{end}}
+
         <!-- 多点背景色，不要老白老白的 -->
         {{ with .Site.Params.backgroundColor }}
         <style type="text/css">
@@ -68,6 +73,8 @@
     {{end}}
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
     {{range .Site.Params.langs }} <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>{{ end }}
+    {{range .Params.langs }} <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>{{ end }}
+
     
     
     <script>hljs.initHighlightingOnLoad();</script>
