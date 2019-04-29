@@ -83,11 +83,11 @@ body.mobile .navbar-nav {
 }
 
 div.outer {
-  margin: 7rem 10% 2% 10%;
+  margin: 0 10% 2% 10%;
 }
 
 body.mobile div.outer {
-  margin: 8.2rem 1rem 1rem 1rem;
+  margin: 0 1rem 1rem 1rem;
 }
 
 body.mobile .big-icon {

@@ -1,6 +1,6 @@
 <footer>
   <hr>
-  <small style="font-size:16px;float:right;margin:0 1rem;">
+  <small style="font-size:0.5em;float:right;margin:0 1rem;">
     &copy; {{ now.Format "2006" }} <a href="https://github.com/{{.Site.Params.github}}">{{ .Site.Params.author }}.</a>
     <!-- Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> using the <a href="https://github.com/arjunkrishnababu96/basics" target="_blank">Basics</a> theme. -->
   </small>
@@ -30,8 +30,8 @@
  (function(){
   var seriesA = document.getElementsByTagName("a");
   seriesA = Array.from(seriesA).filter(x =>x.getAttribute("data-series"));
+  var nameSeries = {}
   if(seriesA.length){
-    var nameSeries = {}
     seriesA.forEach(x =>{
       var xdata = x.getAttribute("data-series")
       if(nameSeries[xdata]){

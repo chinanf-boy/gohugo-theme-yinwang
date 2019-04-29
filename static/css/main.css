@@ -288,7 +288,7 @@ kbd {
 }
 
 #edit-button {
-  font-size: 16px;
+  font-size: 1em;
   float: right;
   margin: 0 1rem;
   background: #cfd7ff;
