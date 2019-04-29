@@ -99,7 +99,7 @@ copyCode: false # 关闭
 imageZoom: false # 关闭
 ```
 
-- [Demo](http://llever.com/2019/04/29/water.css-为简单文章而生的-css-框架/)
+- [Demo](http://llever.com/2019/04/29/water.css-%E4%B8%BA%E7%AE%80%E5%8D%95%E8%80%8C%E7%94%9F%E7%9A%84-css-%E6%A1%86%E6%9E%B6/)
 
 ## 小目录
 
