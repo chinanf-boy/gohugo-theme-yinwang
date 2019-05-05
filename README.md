@@ -76,6 +76,7 @@ theme = "yinwang"
     anchorLink = "¶" # 瞄点链接
     copyCode = true # 代码复制按钮
     imageZoom = true # 图片点击 zoom 一下
+    labels = true # 添加标签链接
 ```
 
 ### 单页面配置优先
@@ -97,6 +98,7 @@ editBtn: false # 关闭
 anchorLink: false # 关闭
 copyCode: false # 关闭
 imageZoom: false # 关闭
+labels: false # 关闭
 ```
 
 - [Demo](http://llever.com/2019/04/29/water.css-%E4%B8%BA%E7%AE%80%E5%8D%95%E8%80%8C%E7%94%9F%E7%9A%84-css-%E6%A1%86%E6%9E%B6/)

@@ -6,6 +6,9 @@
   <hr>
   <hr>
 
+  {{if eq .Params.labels false }}
+
+  {{else if  or (.Site.Params.labels) (.Params.labels) }}
 
   <ul class="tags"  style="float: left!important;">
       {{ if .Params.tags }}
@@ -17,7 +20,8 @@
         <span>分类:</span>
         {{ range .Params.categories }}<li><a class="link" href="{{$.Site.BaseURL}}categories/{{ . }}"> #{{ . }} </a></li>{{ end }}
       {{ end }}
-    </ul>
+  </ul>
+  {{ end }}
   <br>
 
 
