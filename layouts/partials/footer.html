@@ -1,9 +1,26 @@
 <footer>
+    <p style="float:right;margin:0 1rem;">
+        &copy; {{ now.Format "2006" }} <a href="https://github.com/{{.Site.Params.github}}">{{ .Site.Params.author }}.</a>
+        <!-- Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> using the <a href="https://github.com/arjunkrishnababu96/basics" target="_blank">Basics</a> theme. -->
+      </p>
   <hr>
-  <small style="font-size:0.5em;float:right;margin:0 1rem;">
-    &copy; {{ now.Format "2006" }} <a href="https://github.com/{{.Site.Params.github}}">{{ .Site.Params.author }}.</a>
-    <!-- Powered by <a href="https://gohugo.io/" target="_blank">Hugo</a> using the <a href="https://github.com/arjunkrishnababu96/basics" target="_blank">Basics</a> theme. -->
-  </small>
+  <hr>
+
+
+  <ul class="tags"  style="float: left!important;">
+      {{ if .Params.tags }}
+        <span>标签:</span>
+        {{ range .Params.tags }}<li><a class="link" href="{{$.Site.BaseURL}}tags/{{ . }}"> #{{ . }} </a></li>{{ end }}
+      {{ end }}
+      <span>  </span>
+        {{ if .Params.categories }}
+        <span>分类:</span>
+        {{ range .Params.categories }}<li><a class="link" href="{{$.Site.BaseURL}}categories/{{ . }}"> #{{ . }} </a></li>{{ end }}
+      {{ end }}
+    </ul>
+  <br>
+
+
 </footer>
 </div> <!-- closes the outer/inner div -->
 
