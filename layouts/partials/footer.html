@@ -69,7 +69,7 @@
     for(let i in nameSeries){
       var dcreateE = document.createElement("details")
       var screateE = document.createElement("summary")
-      screateE.textContent = i;
+      screateE.innerHTML = `${i} <i style="border-radius: 49%;border: 2px dashed #fe16fe;padding:3px;">${nameSeries[i].length} </i>`;
       var inner = screateE.outerHTML // details innerHTML
 
       nameSeries[i].forEach(x =>{
