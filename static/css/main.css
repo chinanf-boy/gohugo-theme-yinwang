@@ -225,7 +225,7 @@ body.mobile div.outer {
 }
 
 div.inner {
-  margin: 0% auto;
+  margin: 0.5em auto;
   max-width: 1000px;
   padding: 2% 8% 4% 8%;
   border: 1px solid LightGrey;

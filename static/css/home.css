@@ -84,6 +84,7 @@ body.mobile .navbar-nav {
 
 div.outer {
   margin: 0 10% 2% 10%;
+  padding: 1.5em 0;
 }
 
 body.mobile div.outer {
