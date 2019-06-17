@@ -101,7 +101,7 @@ imageZoom: false # 关闭
 labels: false # 关闭
 ```
 
-- [Demo](http://llever.com/2019/04/29/water.css-%E4%B8%BA%E7%AE%80%E5%8D%95%E8%80%8C%E7%94%9F%E7%9A%84-css-%E6%A1%86%E6%9E%B6/)
+- [Demo](http://llever.com/pass-blog/2019/04/29/water.css-%E4%B8%BA%E7%AE%80%E5%8D%95%E8%80%8C%E7%94%9F%E7%9A%84-css-%E6%A1%86%E6%9E%B6/)
 
 ## 小目录
 
@@ -160,7 +160,7 @@ labels: false # 关闭
 >
 ```
 
-> 具体例子:[llever.com](http://llever.com/2018/12/11/译搜索工具的功能比较/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/译-搜索工具的功能比较.md)
+> 具体例子:[llever.com](http://llever.com/pass-blog/2018/12/11/译搜索工具的功能比较/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/译-搜索工具的功能比较.md)
 
 </details>
 
@@ -172,7 +172,7 @@ labels: false # 关闭
 {{% rawcss %}}.blog-post > h2:first-child {display:none}{{% /rawcss %}}
 ```
 
-> 具体例子: [llever.com](http://llever.com/2018/12/28/rust-官方学习索引译-copy/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/Rust-%E5%AE%98%E6%96%B9%E5%AD%A6%E4%B9%A0%E7%B4%A2%E5%BC%95.md)
+> 具体例子: [llever.com](http://llever.com/pass-blog/2018/12/28/rust-官方学习索引译-copy/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/Rust-%E5%AE%98%E6%96%B9%E5%AD%A6%E4%B9%A0%E7%B4%A2%E5%BC%95.md)
 
 ### **3.** 单文件页面，添加独有的 css 文件
 
@@ -198,7 +198,7 @@ css: # 当你输入这个字段，会覆盖掉默认css文件
 
 <br />
 
-[网页可看:css 格式添加说明](http://llever.com/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
+[网页可看:css 格式添加说明](http://llever.com/pass-blog/2018/12/06/nes.css-任天堂风格css框架-yummy/#yinwang-css-格式添加说明)
 
 > 注意 ⚠️:若你的`baseURL`不是根目录，留心`'/css/main.css'`的前路径。[看看具体操作](<(#3--%E6%88%91%E8%A6%81%E6%9C%80%E7%BB%88%E8%BE%93%E5%87%BA%E6%96%87%E4%BB%B6%E7%9A%84baseurl%E9%85%8D%E7%BD%AE%E4%B8%8D%E6%98%AF%E6%A0%B9%E7%9B%AE%E5%BD%95%E4%BD%86%E6%88%91%E5%8F%88%E6%83%B3%E7%94%A8%E5%BC%80%E5%8F%91%E6%9C%8D%E5%8A%A1%E5%99%A8)>)
 
@@ -208,7 +208,7 @@ css: # 当你输入这个字段，会覆盖掉默认css文件
 series: "我是系列博文哦"
 ```
 
-> 具体操作可看[llever.com](http://llever.com/2019/01/11/%E7%B3%BB%E5%88%97-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-hugo-theme/)，与 [js 脚本](./layouts/partials/footer.html#L27)
+> 具体操作可看[llever.com](http://llever.com/pass-blog/2019/01/11/%E7%B3%BB%E5%88%97-%E5%8A%9F%E8%83%BD%E6%B7%BB%E5%8A%A0-hugo-theme/)，与 [js 脚本](./layouts/partials/footer.html#L27)
 
 ### **5.** 编辑按钮
 
