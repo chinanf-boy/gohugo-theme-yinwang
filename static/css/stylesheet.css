@@ -42,3 +42,7 @@ h1 {
 ul {
   margin: 0;
 }
+
+button {
+  cursor: pointer;
+}
