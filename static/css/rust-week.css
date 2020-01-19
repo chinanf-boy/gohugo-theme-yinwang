@@ -1,0 +1,11 @@
+a { color: #804d0f;}
+div.inner { background-color: hsl(60, 9%, 87%); }
+body {
+    background-color: #262625;
+}
+.side-btn {
+    background-color: #262625;
+}
+.side-btn a {
+    color: white;
+}
