@@ -47,8 +47,8 @@ details[open] summary {
 }
 
 body {
-  font-family: 'lucida grande', 'lucida sans unicode', lucida, helvetica,
-    'Hiragino Sans GB', 'Microsoft YaHei', 'WenQuanYi Micro Hei', sans-serif;
+  font-family: "lucida grande", "lucida sans unicode", lucida, helvetica,
+    "Hiragino Sans GB", "Microsoft YaHei", "WenQuanYi Micro Hei", sans-serif;
   font-size: 18px;
 }
 
@@ -62,39 +62,39 @@ li {
 }
 
 h1 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Helvetica, STKaiti,
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti,
     SimSun, serif;
 }
 
 h2 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Helvetica, STKaiti,
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti,
     SimSun, serif;
   margin-bottom: 60px;
   margin-bottom: 40px;
   padding: 5px;
-  border-bottom: 2px LightGrey solid;
+  border-bottom: 2px #8e7b8b solid;
   width: 98%;
   line-height: 150%;
   color: #666666;
 }
 
 h3 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Helvetica, STKaiti,
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti,
     SimSun, serif;
   margin-top: 40px;
   margin-bottom: 30px;
-  border-bottom: 1px LightGrey solid;
+  border-bottom: 1px #8e7b8b solid;
   width: 98%;
   line-height: 150%;
   color: #666666;
 }
 
 h4 {
-  font-family: 'Palatino Linotype', 'Book Antiqua', Palatino, Helvetica, STKaiti,
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, Helvetica, STKaiti,
     SimSun, serif;
   margin-top: 40px;
   margin-bottom: 30px;
-  border-bottom: 1px LightGrey solid;
+  border-bottom: 1px #8e7b8b solid;
   width: 98%;
   line-height: 150%;
   color: #666666;
@@ -102,7 +102,7 @@ h4 {
 
 .box {
   padding: 2% 8% 5% 8%;
-  border: 1px solid LightGrey;
+  border: 1px solid #8e7b8b;
 }
 
 li {
@@ -123,7 +123,7 @@ blockquote p {
 }
 
 pre {
-  font-family: Inconsolata, Consolas, 'DEJA VU SANS MONO', 'DROID SANS MONO',
+  font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO",
     Proggy, monospace;
   font-size: 85%;
   line-height: 1.45;
@@ -145,7 +145,7 @@ pre > code {
 
 code {
   width: 100%;
-  font-family: Inconsolata, Consolas, 'DEJA VU SANS MONO', 'DROID SANS MONO',
+  font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO",
     Proggy, monospace;
   white-space: pre;
   padding: 1px 5px;
@@ -166,7 +166,7 @@ a {
 }
 
 a:hover {
-  background-color: LightGrey;
+  background-color: #8e7b8b;
 }
 
 img {
@@ -190,7 +190,18 @@ img.displayed {
 }
 
 hr {
-  color: LightGrey;
+  color: #8e7b8b;
+  background: linear-gradient(
+    90deg,
+    rgba(251, 89, 74, 1) 0%,
+    rgba(251, 89, 74, 1) 25%,
+    rgba(251, 222, 75, 1) 25%,
+    rgba(251, 222, 75, 1) 50%,
+    rgba(112, 228, 112, 1) 50%,
+    rgba(112, 228, 112, 1) 75%,
+    rgba(51, 183, 255, 1) 75%
+  );
+  height: 13px;
 }
 
 p.notice {
@@ -228,7 +239,7 @@ div.inner {
   margin: 0.5em auto;
   max-width: 1000px;
   padding: 2% 8% 4% 8%;
-  border: 1px solid LightGrey;
+  border: 1px solid #8e7b8b;
   background-color: white;
 }
 
@@ -282,7 +293,7 @@ kbd {
   display: inline-block;
   margin: 0 0.1em;
   padding: 0.1em 0.6em;
-  font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;
+  font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
   font-size: 11px;
   line-height: 1.4;
   color: #242729;
@@ -336,7 +347,7 @@ footer {
 
 .tags {
   font-family: medium-content-sans-serif-font, -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue',
+    "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
     sans-serif;
   letter-spacing: 0;
   font-weight: 400;
@@ -356,7 +367,7 @@ footer {
 }
 
 .tags > li:hover {
-  background-color: LightGrey;
+  background-color: #8e7b8b;
 }
 
 .link {

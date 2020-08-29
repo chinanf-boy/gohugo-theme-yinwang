@@ -1,0 +1,32 @@
+html {
+  color: rgba(255, 255, 255, 0.86);
+  background: rgb(25, 32, 44);
+}
+
+body {
+  background: rgb(25, 32, 44);
+}
+
+.side-btn {
+  background: rgb(25, 32, 44);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  color: rgba(255, 255, 255, 0.86);
+}
+
+.inner {
+  background: rgb(25, 32, 44) !important;
+}
+
+a {
+  border-bottom: none;
+}
+
+.tags > li {
+  color: rgba(255, 255, 255, 0.86);
+}
