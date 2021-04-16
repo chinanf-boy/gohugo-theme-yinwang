@@ -30,7 +30,7 @@
         {{ if eq .Params.anchorlink false }}
         
         {{else if or (.Site.Params.anchorLink) (.Params.anchorlink) }}
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
+        <script src="https://cdn.bootcdn.net/ajax/libs/anchor-js/4.2.0/anchor.min.js"></script>
         <script>
             document.addEventListener("DOMContentLoaded", function(event) {
                 anchors.options = {
@@ -68,11 +68,11 @@
 
         <!-- 代码高亮风格 -->
     {{ with .Site.Params.highlight | default "github" }}
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css" rel="stylesheet">
+    <link href="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/styles/{{ . }}.min.css" rel="stylesheet">
     {{end}}
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
-    {{range .Site.Params.langs }} <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>{{ end }}
-    {{range .Params.langs }} <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>{{ end }}
+    <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+    {{range .Site.Params.langs }} <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>{{ end }}
+    {{range .Params.langs }} <script src="https://cdn.bootcdn.net/ajax/libs/highlight.js/9.12.0/languages/{{ . }}.min.js"></script>{{ end }}
 
     
     
