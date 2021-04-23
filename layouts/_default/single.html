@@ -1,35 +1,39 @@
 {{ partial "header" . }}
 
-<div class="inner" style="position:relative;">
-  {{ if eq .Site.Params.single false }}
-  
-  {{ else }}
+<div class="inner container center" style="position: relative">
+  {{ if eq .Site.Params.single false }} {{ else }}
   <div class="side-btn"><a href="{{.Site.BaseURL}}" class="back">Home</a></div>
   {{ end }}
-<div class="blog-post">
-  <h2>{{ .Params.title }}</h2>
-        {{ .Content }}
+  <div class="blog-post post">
+    <h2 class="post-title">{{ .Params.title }}</h2>
+    {{ .Content }}
   </div>
 
-<br>
-  
-{{ if eq .Params.editbtn false }}
+  <br />
 
-{{else if or (.Site.Params.editBtn) (.Params.editbtn) }}
-<button id="edit-button" class="icon-button" type="button" title="Fork and edit" aria-label="Fork and edit"
-aria-haspopup="true" aria-expanded="false" aria-controls="edit">
-<i class="fa fa-edit">编辑本文</i>
-</button>
-{{end}}
+  {{ if eq .Params.editbtn false }}
+  <span></span>
+  {{else if or (.Site.Params.editBtn) (.Params.editbtn) }}
+  <button
+    id="edit-button"
+    class="icon-button"
+    type="button"
+    title="Fork and edit"
+    aria-label="Fork and edit"
+    aria-haspopup="true"
+    aria-expanded="false"
+    aria-controls="edit"
+  >
+    <i class="fa fa-edit">编辑本文</i>
+  </button>
+  {{end}}
 
-<br>
+  <br />
 
-
-{{ if eq .Params.copycode false }}
-
-{{ else if or (.Site.Params.copyCode) (.Params.copycode)}}
-<script src="{{.Site.BaseURL}}js/copyCode.js"></script>
-<script src="{{.Site.BaseURL}}js/tooltips.js"></script>
-{{ end }}
-
-{{ partial "footer" . }}
+  {{ if eq .Params.copycode false }}
+  <span></span>
+  {{ else if or (.Site.Params.copyCode) (.Params.copycode)}}
+  <script src="{{.Site.BaseURL}}js/copyCode.js"></script>
+  <script src="{{.Site.BaseURL}}js/tooltips.js"></script>
+  {{ end }} {{ partial "footer" . }}
+</div>

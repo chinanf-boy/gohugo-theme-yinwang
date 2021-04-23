@@ -1,0 +1,56 @@
+pre .btn {
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  padding: 2px 6px;
+  position: absolute;
+  right: 4px;
+  top: 4px;
+}
+
+pre:hover .btn,
+pre .btn:focus {
+  opacity: 1;
+}
+
+pre .clippy {
+  margin: 0;
+  margin-top: -3px;
+  position: relative;
+  top: 3px;
+  width: 13px;
+  display: inline;
+  border-radius: unset;
+  -webkit-box-shadow: 0 0 0px #555;
+}
+
+pre {
+  font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO",
+    Proggy, monospace;
+  font-size: 85%;
+  line-height: 1.45;
+  font-weight: 500;
+  background-color: #f4f4f4;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  padding: 4px;
+  position: relative;
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+
+pre > code {
+  padding: 12px !important;
+  display: block;
+}
+
+code {
+  width: 100%;
+  font-family: Inconsolata, Consolas, "DEJA VU SANS MONO", "DROID SANS MONO",
+    Proggy, monospace;
+  white-space: pre;
+  padding: 1px 5px;
+  font-size: 1em;
+}
