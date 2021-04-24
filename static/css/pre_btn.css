@@ -54,3 +54,10 @@ code {
   padding: 1px 5px;
   font-size: 1em;
 }
+
+a {
+  text-decoration: none;
+  cursor: crosshair;
+  border-bottom: 1px dashed orange;
+  color: #930ee4;
+}
