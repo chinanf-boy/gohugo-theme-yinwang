@@ -110,7 +110,7 @@
 {{if .Site.Params.githubRepo}}
 <script>
         document.getElementById("edit-button").addEventListener("click", function () {
-            var editWindow = window.open("{{ .Site.Params.githubRepo }}/edit/master/content/{{.File.Path}}");
+            var editWindow = window.open("{{ .Site.Params.githubRepo }}/edit/master/content/{{ with .File }}{{ .Path }}{{ end }}");
         });</script>
 {{ end }}
     <!-- // END - Edit Button -->
