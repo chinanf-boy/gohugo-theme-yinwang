@@ -45,6 +45,11 @@ details a {
   margin-top: 1.5rem;
 }
 
+details summary::marker {
+  color: rgb(255, 74, 74);
+  font-size: 1.1em;
+}
+
 li.title:hover {
   background-color: #eee;
   font-size: 100%;

@@ -67,9 +67,10 @@
     for(let i in nameSeries){
       var dcreateE = document.createElement("details")
       var screateE = document.createElement("summary")
+      screateE.style.display = "list-item" // fix: summary without ::marker in firefox
       screateE.innerHTML = `系列:<span style="color: #777;"> ${i} </span>` + 
       `<span style="border-radius: 29%;border: 2px dashed #fe16fe;padding:3px;">No.${nameSeries[i].length}</span> ` + 
-      `最新:${nameSeries[i][0].text}`;
+      `最新:<span style="color: #428bca;">${nameSeries[i][0].text} </span>`;
       var inner = screateE.outerHTML // details innerHTML
 
       nameSeries[i].forEach(x =>{
