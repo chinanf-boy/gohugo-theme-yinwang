@@ -10,9 +10,17 @@ table {
 /* end reset CSS */
 
 body {
-  font-family: STFangSong, Helvetica, Arial, Vernada, Tahoma, STXihei,
+  font-family: 'Source', Helvetica, Arial, Vernada, Tahoma, STXihei,
     'Microsoft YaHei', 'Songti SC', SimSun, Heiti, sans-serif;
   font-size: 21px;
+}
+
+@font-face {
+  font-family: 'Source';
+  src: url('fonts/SourceCodePro-Regular.ttf') format('truetype'),
+       url('fonts/SourceCodePro-Regular.otf.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
 }
 
 body.mobile {
