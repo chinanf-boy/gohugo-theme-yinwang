@@ -169,7 +169,7 @@ labels: false # 关闭
 ### **2.** 使用`rawcss`，使用 css 内容(主要是修复`< >`符号的转义问题)
 
 ```
-{{% rawcss %}}.blog-post > h2:first-child {display:none}{{% /rawcss %}}
+{{< rawcss >}}.blog-post > h2:first-child {display:none}{{< /rawcss >}}
 ```
 
 > 具体例子: [llever.com](http://llever.com/pass-blog/2018/12/28/rust-官方学习索引译-copy/) \| [源文件](https://github.com/chinanf-boy/yobrave-blog-with-Hugo/blob/master/content/post/Rust-%E5%AE%98%E6%96%B9%E5%AD%A6%E4%B9%A0%E7%B4%A2%E5%BC%95.md)
